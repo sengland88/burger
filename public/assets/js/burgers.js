@@ -1,4 +1,16 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+let bonQuiQui = [
+  {
+    photo: "assets/img/complicated.jpg",
+  },
+  {
+    photo: "assets/img/rude.jpg",
+  },
+  {
+    photo: "assets/img/security.jpg",
+  }
+]
+
+
 $(function() {
     $(".change-burger").on("click", function(event) {
 
@@ -37,10 +49,34 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          location.reload();
+          bonQuiQuiPhoto()
+          $("#complicatedOrder").modal('show')
         }
       );
     });
+    
+    $("#closeButton").on("click" , function(event){
+      reloadPage()
+    })
+});
+
+function reloadPage() {
+  location.reload();
+}
+
+function bonQuiQuiPhoto() {
+
+  let ranNum = Math.floor(Math.random() * bonQuiQui.length)
+  let ranQuote = bonQuiQui[ranNum].photo  
+
+  let modalImage = $("<img>")
+  .attr("src", ranQuote)
+  .addClass("img-fluid")
+  .attr("alt", "Responsive image")
+
+  $("#bonQuiQuiPhoto").html(modalImage)
+
+}
+
   
-  });
   

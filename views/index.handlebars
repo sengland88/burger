@@ -1,24 +1,38 @@
-<h1>Burgers</h1>
+<div class="jumbotron">
+  <h1 class="display-4">King Burger</h1>
+  <p class="lead">Welcome to King Burger where we can do it your way ... but don't get crazy.</p>
+  <hr class="my-4">
+</div>
 
-<h2>The Menu</h2>
+  <div class="row">
 
-<ul>
-  {{#each burgers}}
-    {{#unless eaten}}
-      {{> burgers/burger-block eaten=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      
+    <div class="col-sm">
+        <h2>The Menu</h2>
 
-<h2>Already Eaten</h2>
+        <ul>
+        {{#each burgers}}
+            {{#unless eaten}}
+            {{> burgers/burger-block eaten=false}}
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if eaten}}
-      {{> burgers/burger-block eaten=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+
+    <div class="col-sm">
+      <h2>Already Eaten</h2>
+
+        <ul>
+        {{#each burgers}}
+            {{#if eaten}}
+            {{> burgers/burger-block eaten=true}}
+            {{/if}}
+        {{/each}}
+        </ul>
+    </div>
+
+  </div>
 
 <h2>Add burger</h2>
 <form class="create-form">
