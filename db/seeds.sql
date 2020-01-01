@@ -6,3 +6,4 @@ INSERT INTO burgers (name) VALUES ('BBQ Burger');
 INSERT INTO burgers (name) VALUES ('Veggie Burger');
 INSERT INTO burgers (name) VALUES ('Macaroni Burger');
 INSERT INTO burgers (name) VALUES ('Double Bacon Cheeseburger');
+

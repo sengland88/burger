@@ -13,31 +13,34 @@ router.get("/", function(req, res) {
   });
 });
 
-// router.post("/api/cats", function(req, res) {
-//   burger.create([
-//     "name", "sleepy"
-//   ], [
-//     req.body.name, req.body.sleepy
-//   ], function(result) {
-//     res.json({ id: result.insertId });
-//   });
-// });
+router.post("/api/burgers", function(req, res) {
+    burger.create([
+    "name"
+    ], [
+    req.body.name
+    ], function(result) {
+    res.json({ id: result.insertId });
+    });
+});
 
-// router.put("/api/cats/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
+router.put("/api/burgers/:id", function(req, res) {
 
-//   console.log("condition", condition);
+    console.log("router . put")
 
-//   burger.update({
-//     sleepy: req.body.sleepy
-//   }, condition, function(result) {
-//     if (result.changedRows == 0) {
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+    var condition = "id = " + req.params.id;
+
+    console.log("condition", condition);
+
+    burger.update({
+        eaten: req.body.eaten
+    }, condition, function(result) {
+    if (result.changedRows == 0) {
+        return res.status(404).end();
+    } else {
+        res.status(200).end();
+    }
+    });
+});
 
 // router.delete("/api/cats/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
