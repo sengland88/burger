@@ -10,7 +10,6 @@ let bonQuiQui = [
   }
 ]
 
-
 $(function() {
     $(".change-burger").on("click", function(event) {
 
@@ -39,9 +38,25 @@ $(function() {
   
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
-  
+
+      let burgerName = $("#burgerName").val().trim()
+
+      if (burgerName === "") {
+
+        let image = "assets/img/order.jpg"
+
+        let modalImage = $("<img>")
+        .attr("src", image)
+        .addClass("img-fluid")
+        .attr("alt", "Responsive image")
+      
+        $("#bonQuiQuiPhoto").html(modalImage)
+        $("#complicatedOrder").modal('show')
+        return
+      } 
+
       var newBurger = {
-        name: $("#burgerName").val().trim(),
+        name: burgerName
       };
 
       $.ajax("/api/burgers", {
@@ -53,6 +68,9 @@ $(function() {
           $("#complicatedOrder").modal('show')
         }
       );
+
+  
+      
     });
     
     $("#closeButton").on("click" , function(event){

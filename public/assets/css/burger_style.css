@@ -1,3 +1,13 @@
 body {
     font-size: 24px;
+    background-color: #FAAF18;    
+    }
+
+.boxes {
+    background-color: #EE1D23;
+    color: #FAAF18;
+    border-style: solid;
+    border-color: #185494;
+    border-width: 5px;
+
 }

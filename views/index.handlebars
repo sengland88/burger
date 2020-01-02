@@ -1,14 +1,16 @@
-<div class="jumbotron">
-  <h1 class="display-4">King Burger</h1>
+{{!-- <div class="jumbotron">
+  
   <p class="lead">Welcome to King Burger where we can do it your way ... but don't get crazy.</p>
   <hr class="my-4">
-</div>
+</div> --}}
+
+<img class="img-fluid" alt="Responsive image" src="assets/img/kingburger.jpg">
 
   <div class="row">
 
       
-    <div class="col-sm">
-        <h2>The Menu</h2>
+    <div class="col-sm boxes rounded-sm m-2 p-1">
+        <h2 class="text-center">Current Order(s)</h2>
 
         <ul>
         {{#each burgers}}
@@ -20,8 +22,8 @@
     </div>
 
 
-    <div class="col-sm">
-      <h2>Already Eaten</h2>
+    <div class="col-sm boxes rounded-sm m-2 p-1">
+      <h2 class="text-center">Past Order(s)</h2>
 
         <ul>
         {{#each burgers}}
@@ -34,13 +36,20 @@
 
   </div>
 
-<h2>Add burger</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label>Burger Name</label>
-    <input type="text" name="name" id="burgerName">
-  </div>
+<div class="row text-center">
+    <div class="col-sm m-2 p-2 rounded-sm boxes">
+        <h2>Add burger</h2>
+        <form class="create-form">
 
-  <button type="submit">Add it to the menu</button>
-</form>
+        <div class="form-group">
+            <label>Burger Name</label>
+            <input type="text" name="name" id="burgerName">
+        </div>
+
+        <button type="submit">Add it to the menu</button>
+        </form>
+    </div>
+</div>
+
+
