@@ -68,7 +68,6 @@ $(function() {
           $("#complicatedOrder").modal('show')
         }
       );
-
   
       
     });
@@ -95,6 +94,4 @@ function bonQuiQuiPhoto() {
   $("#bonQuiQuiPhoto").html(modalImage)
 
 }
-
-  
   
