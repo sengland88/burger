@@ -22,4 +22,4 @@ To ensure that no MySQL entry is left blank, I added validation to ensure that t
 
 <h2>URL</h2>
 
-https://gentle-scrubland-63294.herokuapp.com/
+http://bit.ly/2sGJGg9
